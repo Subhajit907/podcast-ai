@@ -1,95 +1,145 @@
-# AI Podcast Generator
-Transform any web article or blog post into an engaging podcast between two speakers using [Minimax](https://www.minimax.io/) M2.1 and [Minimax](https://www.minimax.io/) Speech 2.6's state of the art capabilities.
+# 🎙️ AI Podcast Generator
 
-## Overview
+Transform any web article or blog post into an engaging, two-speaker podcast using **Minimax M2.1** and **Minimax Speech 2.6**.
 
-AI Podcast Generator is an intelligent tool that converts written content into natural-sounding podcast dialogues. Simply provide a URL, and the system will:
+AI Podcast Generator turns written content into natural, conversational audio—making it easy to listen to articles instead of reading them.
 
-- Scrape and extract clean content from any webpage
-- Generate an engaging two-host podcast script with natural conversation flow
-- Converts the text script into audio segments for the podcast
-- Merge all segments into a complete, ready-to-listen podcast
+---
 
-### Tech Stack
+## 🚀 Overview
 
-- **Minimax-M2.1** for intelligent script generation and dialogue conversion
-- **Minimax Speech 2.6** for natural-sounding text-to-speech with multiple voice options
-- **Firecrawl** for robust web scraping and content extraction
-- **Streamlit** for an intuitive and interactive web interface
+**AI Podcast Generator** is an intelligent tool that converts online content into high-quality podcast dialogues.
+Simply provide a URL, and the system will:
 
-## How It Works
+* Scrape and extract clean, readable content from any webpage
+* Generate an engaging, two-host podcast script with a natural conversational flow
+* Convert the script into high-quality audio using multi-speaker text-to-speech
+* Merge all audio segments into a single, ready-to-listen podcast file
 
-1. **Content Extraction**: Firecrawl scrapes the provided URL and extracts clean, structured content
-2. **Script Generation**: Minimax-M2.1 analyzes the content and creates an engaging podcast dialogue between two hosts
-4. **Audio Synthesis**: Each dialogue segment is converted to speech using Minimax's advanced TTS models
-5. **Merging**: All audio segments are seamlessly combined into a single podcast file
-6. **Delivery**: Users can listen to, download, and share their AI-generated podcast
+From URL to podcast—in minutes.
 
-## Installation & Setup
+---
 
-**Prerequisites**: Python 3.12+
-    
-1. **Install dependencies:**
-    First, install `uv` and set up the environment:
-    ```bash
-    # MacOS/Linux
-    curl -LsSf https://astral.sh/uv/install.sh | sh
+## 🧰 Tech Stack
 
-    # Windows
-    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-    ```
+* **Minimax M2.1** – Intelligent script generation and dialogue creation
+* **Minimax Speech 2.6** – Natural-sounding, multi-voice text-to-speech
+* **Firecrawl** – Robust web scraping and content extraction
+* **Streamlit** – Interactive and user-friendly web interface
 
-    Install dependencies:
-    ```bash
-    # Create a new directory for our project
-    uv init ai-podcast-generator
-    cd ai-podcast-generator
+---
 
-    # Create virtual environment and activate it
-    uv venv
-    source .venv/bin/activate  # MacOS/Linux
+## 🧠 How It Works
 
-    .venv\Scripts\activate     # Windows
+1. **Content Extraction**
+   Firecrawl scrapes the provided URL and extracts clean, structured text.
 
-    # Install dependencies
-    uv sync
-    ```
+2. **Script Generation**
+   Minimax M2.1 analyzes the content and transforms it into an engaging podcast conversation between two hosts.
 
-2. **Set up environment variables:**
-   Create a `.env` file with your API keys as specified in `.env.example` file:
-   ```env
-   MINIMAX_API_KEY=<YOUR_MINIMAX_API_KEY>
-   FIRECRAWL_API_KEY=<YOUR_FIRECRAWL_API_KEY>
-   OPENROUTER_API_KEY=<YOUR_OPENROUTER_API_KEY>
-   ```
+3. **Audio Synthesis**
+   Each dialogue segment is converted into speech using Minimax’s advanced text-to-speech models.
 
-3. **Get your API keys:**
+4. **Audio Merging**
+   All generated audio segments are seamlessly combined into a single podcast file.
 
-   - **Minimax**: [platform.minimax.io](https://platform.minimax.io)
-   - **Firecrawl**: [firecrawl.dev](https://firecrawl.dev)
-   - **OpenRouter**: [openrouter.ai](https://openrouter.ai)
+5. **Delivery**
+   Users can listen to, download, and share their AI-generated podcast.
 
-   You can enter these keys directly in the app's sidebar when you run it.
+---
 
-## Usage
+## ⚙️ Installation & Setup
 
-### Running the Web Application
+### Prerequisites
+
+* **Python 3.12+**
+
+---
+
+### 1️⃣ Install Dependencies
+
+First, install `uv` and set up the environment.
+
+**MacOS / Linux**
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**Windows**
+
+```bash
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Create and set up the project:
+
+```bash
+uv init ai-podcast-generator
+cd ai-podcast-generator
+
+uv venv
+source .venv/bin/activate   # MacOS/Linux
+.venv\Scripts\activate      # Windows
+
+uv sync
+```
+
+---
+
+### 2️⃣ Configure Environment Variables
+
+Create a `.env` file using `.env.example` as a reference and add your API keys:
+
+```env
+MINIMAX_API_KEY=<YOUR_MINIMAX_API_KEY>
+FIRECRAWL_API_KEY=<YOUR_FIRECRAWL_API_KEY>
+OPENROUTER_API_KEY=<YOUR_OPENROUTER_API_KEY>
+```
+
+---
+
+### 3️⃣ Obtain API Keys
+
+* **Minimax**: [https://platform.minimax.io](https://platform.minimax.io)
+* **Firecrawl**: [https://firecrawl.dev](https://firecrawl.dev)
+* **OpenRouter**: [https://openrouter.ai](https://openrouter.ai)
+
+You can also enter these keys directly from the app’s sidebar when running the application.
+
+---
+
+## ▶️ Usage
+
+### Run the Web Application
 
 ```bash
 streamlit run app.py
 ```
 
-The app will open at `http://localhost:8501`
-
-### Using the Application
-
-1. **Enter API Keys**: Input your Firecrawl, OpenRouter, and Minimax API keys in the left sidebar
-2. **Provide URL**: Enter the URL of the article or blog post you want to convert
-3. **Generate**: Click "Generate Podcast" and watch the magic happen
-4. **Listen & Download**: Once complete, listen to your podcast or download it for later
+The app will be available at:
+👉 `http://localhost:8501`
 
 ---
 
-## Contribution
+### Using the Application
 
-Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
+1. **Enter API Keys**
+   Add your Firecrawl, OpenRouter, and Minimax API keys in the left sidebar.
+
+2. **Provide a URL**
+   Paste the link to any article or blog post you want to convert.
+
+3. **Generate Podcast**
+   Click **Generate Podcast** and let the system do the rest.
+
+4. **Listen & Download**
+   Play the generated podcast directly in the app or download it for later.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to fork the repository, make improvements, and submit a pull request.
+
