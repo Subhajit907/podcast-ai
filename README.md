@@ -141,5 +141,6 @@ The app will be available at:
 ## 🤝 Contributing
 
 Contributions are welcome!
-Feel free to fork the repository, make improvements, and submit a pull request.
+Feel free to fork the repository, make improvements, and submit a pull request..
+
 
